@@ -13,14 +13,14 @@ void loop() {
   // put your main code here, to run repeatedly:
   if(Communication.available()>0) // check for incoming data
   {
-    int data = Communication.read(); //Read Data
-    if(data==1)
+    char data = Communication.read(); //Read Data
+    if(data=='1')
       digitalWrite(LED1,HIGH); //Turn ON LED1
-    else if(data==2)
+    else if(data=='2')
       digitalWrite(LED1,LOW);  //Turn OFF LED1
-    else if(data==3)
+    else if(data=='3')
       digitalWrite(LED2,HIGH); //Turn ON LED2
-    else if(data==4)
+    else if(data=='4')
       digitalWrite(LED2,LOW);  //Turn OFF LED2
   }
   delay(100);
